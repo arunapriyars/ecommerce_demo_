@@ -1,0 +1,17 @@
+{
+  "name": "vibecart",
+  "version": "1.0.0",
+  "description": "VibeCart — Shop Your Vibe | Modern full-stack personality & mood driven e-commerce application",
+  "scripts": {
+    "dev": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "start": "concurrently -n \"BACKEND,FRONTEND\" -c \"cyan,magenta\" \"npm start --prefix backend\" \"npm run preview --prefix frontend\"",
+    "dev:backend": "npm run dev --prefix backend",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "seed": "npm run seed --prefix backend",
+    "build": "npm run build --prefix frontend",
+    "setup": "npm install && npm install --prefix backend && npm install --prefix frontend && npm run seed"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
